@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>안녕하세요! 저를 소개합니다</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts Inter & Pretendard -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Pretendard', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Pretendard', sans-serif;
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+        }
+        /* Custom scrollbar and glassmorphism styling */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="h-full flex items-center justify-center p-4 sm:p-6 md:p-8">
+
+    <main class="w-full max-w-md mx-auto">
+        <!-- Digital Business Card Container -->
+        <div class="glass-card shadow-2xl rounded-3xl overflow-hidden transition-all duration-500 hover:shadow-3xl animate-float">
+            
+            <!-- Header Banner Section -->
+            <div class="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 p-6 sm:p-8 text-white text-center">
+                <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                
+                <!-- Profile Avatar / Icon -->
+                <div class="relative z-10 w-24 h-24 sm:w-28 sm:h-28 mx-auto mb-4 rounded-full bg-white/20 p-1.5 backdrop-blur-md shadow-inner flex items-center justify-center border border-white/40">
+                    <div class="w-full h-full rounded-full bg-gradient-to-tr from-indigo-500 to-pink-400 flex items-center justify-center text-3xl sm:text-4xl shadow-md">
+                        ✨
+                    </div>
+                </div>
+
+                <h1 class="relative z-10 text-2xl sm:text-3xl font-bold tracking-tight mb-1">다재다능한 탐구가</h1>
+                <p class="relative z-10 text-indigo-100 text-sm sm:text-base font-medium">끊임없이 달리고 배우는 사람</p>
+                
+                <!-- Quick Status Badges -->
+                <div class="relative z-10 flex flex-wrap justify-center gap-2 mt-4">
+                    <span class="px-3 py-1 bg-white/20 hover:bg-white/30 transition text-xs font-semibold rounded-full backdrop-blur-sm">
+                        🏃‍♂️ 러너 & 수영인
+                    </span>
+                    <span class="px-3 py-1 bg-white/20 hover:bg-white/30 transition text-xs font-semibold rounded-full backdrop-blur-sm">
+                        🧬 학문 탐구자
+                    </span>
+                </div>
+            </div>
+
+            <!-- Content Details Section -->
+            <div class="p-6 sm:p-8 space-y-6">
+
+                <!-- Section 1: Hobbies (러닝 & 수영) -->
+                <div>
+                    <h2 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-heart text-pink-500"></i> Hobbies & Lifestyle
+                    </h2>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="p-4 rounded-2xl bg-indigo-50/70 border border-indigo-100 flex items-center gap-3 transition hover:bg-indigo-100/70">
+                            <div class="w-10 h-10 rounded-xl bg-indigo-500 text-white flex items-center justify-center text-lg shadow-sm">
+                                <i class="fa-solid fa-person-running"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800 text-sm">러닝</h3>
+                                <p class="text-xs text-gray-500">한계 돌파의 즐거움</p>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-cyan-50/70 border border-cyan-100 flex items-center gap-3 transition hover:bg-cyan-100/70">
+                            <div class="w-10 h-10 rounded-xl bg-cyan-500 text-white flex items-center justify-center text-lg shadow-sm">
+                                <i class="fa-solid fa-water"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800 text-sm">수영</h3>
+                                <p class="text-xs text-gray-500">물살을 가르는 몰입</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2: Current Studies (생물학 & 심리학) -->
+                <div>
+                    <h2 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-book-open text-purple-500"></i> Current Study
+                    </h2>
+                    <div class="space-y-2.5">
+                        <div class="p-3.5 rounded-2xl bg-white border border-gray-100 shadow-xs flex items-center justify-between transition hover:border-purple-200">
+                            <div class="flex items-center gap-3">
+                                <div class="w-9 h-9 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center">
+                                    <i class="fa-solid fa-dna"></i>
+                                </div>
+                                <span class="font-semibold text-gray-800 text-sm">생물학 (Biology)</span>
+                            </div>
+                            <span class="text-xs px-2.5 py-1 bg-purple-50 text-purple-600 rounded-lg font-medium">탐구 중</span>
+                        </div>
+                        <div class="p-3.5 rounded-2xl bg-white border border-gray-100 shadow-xs flex items-center justify-between transition hover:border-purple-200">
+                            <div class="flex items-center gap-3">
+                                <div class="w-9 h-9 rounded-xl bg-pink-100 text-pink-600 flex items-center justify-center">
+                                    <i class="fa-solid fa-brain"></i>
+                                </div>
+                                <span class="font-semibold text-gray-800 text-sm">심리학 (Psychology)</span>
+                            </div>
+                            <span class="text-xs px-2.5 py-1 bg-pink-50 text-pink-600 rounded-lg font-medium">공부 중</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 3: Current Work (수학학원 조교 & 일일 알바) -->
+                <div>
+                    <h2 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-briefcase text-indigo-500"></i> Work & Experience
+                    </h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div class="p-3.5 rounded-2xl bg-amber-50/70 border border-amber-100 flex items-center gap-3">
+                            <div class="w-9 h-9 rounded-xl bg-amber-500 text-white flex items-center justify-center text-sm shadow-sm">
+                                <i class="fa-solid fa-calculator"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800 text-xs sm:text-sm">수학학원 조교</h3>
+                                <p class="text-[11px] text-gray-500">꼼꼼한 티칭과 케어</p>
+                            </div>
+                        </div>
+                        <div class="p-3.5 rounded-2xl bg-emerald-50/70 border border-emerald-100 flex items-center gap-3">
+                            <div class="w-9 h-9 rounded-xl bg-emerald-500 text-white flex items-center justify-center text-sm shadow-sm">
+                                <i class="fa-solid fa-bolt"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800 text-xs sm:text-sm">일일 알바</h3>
+                                <p class="text-[11px] text-gray-500">다양한 현장 경험 쌓기</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Button -->
+                <div class="pt-2">
+                    <button onclick="showAlert()" class="w-full py-3.5 px-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-semibold rounded-2xl shadow-lg shadow-indigo-500/25 transition-all duration-200 flex items-center justify-center gap-2 text-sm">
+                        <i class="fa-solid fa-paper-plane"></i> 연락하기 / 메시지 남기기
+                    </button>
+                </div>
+
+            </div>
+            
+            <!-- Footer Branding -->
+            <div class="bg-gray-50/80 px-6 py-4 text-center border-t border-gray-100">
+                <p class="text-xs text-gray-400 font-medium">Designed with passion & energy 🚀</p>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        // Custom interactive notification box instead of default alert
+        function showAlert() {
+            // Check if modal already exists to prevent duplicates
+            if (document.getElementById('custom-modal')) return;
+
+            const modal = document.createElement('div');
+            modal.id = 'custom-modal';
+            modal.className = 'fixed inset-0 bg-black/40 backdrop-blur-xs flex items-center justify-center p-4 z-50 transition-opacity duration-300';
+            modal.innerHTML = `
+                <div class="bg-white rounded-3xl p-6 max-w-xs w-full shadow-2xl text-center transform scale-95 transition-transform duration-300" id="modal-content">
+                    <div class="w-14 h-14 bg-indigo-100 text-indigo-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4">
+                        👋
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-1">반갑습니다!</h3>
+                    <p class="text-xs text-gray-500 mb-6 leading-relaxed">러닝, 수영, 그리고 배움을 사랑하는 저의 명함에 방문해 주셔서 감사합니다.</p>
+                    <button onclick="closeModal()" class="w-full py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold rounded-xl transition shadow-md">
+                        확인
+                    </button>
+                </div>
+            `;
+            document.body.appendChild(modal);
+            setTimeout(() => {
+                document.getElementById('modal-content').classList.remove('scale-95');
+                document.getElementById('modal-content').classList.add('scale-100');
+            }, 10);
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('custom-modal');
+            if (modal) {
+                modal.remove();
+            }
+        }
+    </script>
+</body>
+</html>
